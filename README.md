@@ -37,6 +37,7 @@ pip3 install -r requirements.txt
 - Run Server
 
 ```
+cd src
 python manage.py runserver
 ```
 
