@@ -7,6 +7,9 @@ routers = routers.DefaultRouter()
 routers.register('projects',ProjectViewSet)
 routers.register('members',MemberViewSet)
 routers.register('contact',ContactViewSet)
+routers.register('event',EventViewSet)
+routers.register('register',RegistrationViewSet)
+
 
 
 urlpatterns = [

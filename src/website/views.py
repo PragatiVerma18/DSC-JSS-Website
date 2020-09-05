@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import ProjectsSerializer, MembersSerializer, ContactSerializer
-from .models import Projects, Members, Contact
+from .serializers import ProjectsSerializer, MembersSerializer, ContactSerializer, EventSerializer, RegistrationSerializer
+from .models import Projects, Members, Contact, Event, Registration
 # Create your views here.
 
 
@@ -18,3 +18,13 @@ class MemberViewSet(viewsets.ModelViewSet):
 class ContactViewSet(viewsets.ModelViewSet):
     queryset=Contact.objects.all()
     serializer_class=ContactSerializer
+
+
+class EventViewSet(viewsets.ModelViewSet):
+    queryset=Event.objects.all()
+    serializer_class=EventSerializer
+
+
+class RegistrationViewSet(viewsets.ModelViewSet):
+    queryset=Registration.objects.all()
+    serializer_class=RegistrationSerializer
